@@ -120,6 +120,21 @@ export default function Footer() {
             ♿ RegiFlex é desenvolvido com foco em acessibilidade digital. Se encontrar dificuldades ao navegar, entre em contato conosco.
           </p>
         </div>
+
+        {/* Credit */}
+        <div className="mt-6 text-center text-xs text-gray-600">
+          <p>
+            Feito por{' '}
+            <a
+              href="https://core-patch-website.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-yellow hover:text-yellow-400 transition font-semibold"
+            >
+              Core & Patch
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
