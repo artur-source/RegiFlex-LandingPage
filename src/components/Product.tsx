@@ -5,54 +5,89 @@ export default function Product() {
     <section id="product" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-primary-blue mb-16">
-          O Produto RegiFlex
+          A Solução RegiFlex
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
-          <div>
-            <h3 className="text-3xl font-bold text-primary-blue mb-6">
-              Sistema de Organização de Fluxo de Atendimento Clínico
-            </h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              RegiFlex é uma plataforma SaaS (Software as a Service) que digitaliza e organiza todo o fluxo de atendimento em clínicas e consultórios, desde a chegada do paciente até o fim do atendimento.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Com uma interface intuitiva e acessível, o sistema elimina processos manuais, reduz filas e melhora significativamente a experiência tanto do paciente quanto da equipe clínica.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Desenvolvido com foco em clínicas e consultórios de pequeno e médio porte, RegiFlex oferece uma solução simples, escalável e de baixo custo operacional.
-            </p>
-          </div>
+        {/* Descrição */}
+        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-8 mb-12">
+          <p className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+            RegiFlex é uma plataforma digital que permite otimizar o cadastro de pacientes e organizar o fluxo de atendimento em clínicas, reduzindo filas e melhorando a gestão da recepção.
+          </p>
+        </div>
 
-          <div className="bg-gradient-to-br from-primary-blue to-primary-green rounded-lg p-8 text-white">
-            <h4 className="text-2xl font-bold mb-6">Público-Alvo</h4>
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Público-Alvo */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-primary-blue mb-6">Público-Alvo</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <span className="text-primary-yellow text-2xl">✓</span>
+                <span className="text-primary-green text-2xl">✓</span>
                 <div>
-                  <p className="font-bold">Clínicas e Consultórios</p>
-                  <p className="text-blue-100">De pequeno e médio porte</p>
+                  <p className="font-bold text-gray-800">Clínicas Médicas</p>
+                  <p className="text-gray-600 text-sm">De pequeno e médio porte</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-yellow text-2xl">✓</span>
+                <span className="text-primary-green text-2xl">✓</span>
                 <div>
-                  <p className="font-bold">Centros de Diagnóstico</p>
-                  <p className="text-blue-100">Com alto fluxo de pacientes</p>
+                  <p className="font-bold text-gray-800">Consultórios</p>
+                  <p className="text-gray-600 text-sm">Consultórios especializados</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-yellow text-2xl">✓</span>
+                <span className="text-primary-green text-2xl">✓</span>
                 <div>
-                  <p className="font-bold">Instituições de Saúde</p>
-                  <p className="text-blue-100">Buscando modernização</p>
+                  <p className="font-bold text-gray-800">Centros de Saúde</p>
+                  <p className="text-gray-600 text-sm">Centros de diagnóstico</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-primary-yellow text-2xl">✓</span>
+                <span className="text-primary-green text-2xl">✓</span>
                 <div>
-                  <p className="font-bold">Profissionais de Saúde</p>
-                  <p className="text-blue-100">Que precisam de eficiência</p>
+                  <p className="font-bold text-gray-800">Recepções Hospitalares</p>
+                  <p className="text-gray-600 text-sm">Gestão de fluxo hospitalar</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Principais Funcionalidades */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-primary-blue mb-6">Principais Funcionalidades</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-yellow text-2xl">•</span>
+                <div>
+                  <p className="font-bold text-gray-800">Cadastro Digital de Pacientes</p>
+                  <p className="text-gray-600 text-sm">Rápido e intuitivo</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-yellow text-2xl">•</span>
+                <div>
+                  <p className="font-bold text-gray-800">Geração de QR Code</p>
+                  <p className="text-gray-600 text-sm">Para identificação de pacientes</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-yellow text-2xl">•</span>
+                <div>
+                  <p className="font-bold text-gray-800">Leitura Rápida de Cadastro</p>
+                  <p className="text-gray-600 text-sm">Pela clínica via QR Code</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-yellow text-2xl">•</span>
+                <div>
+                  <p className="font-bold text-gray-800">Gestão de Fila</p>
+                  <p className="text-gray-600 text-sm">Organização eficiente de atendimento</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-yellow text-2xl">•</span>
+                <div>
+                  <p className="font-bold text-gray-800">Painel Administrativo</p>
+                  <p className="text-gray-600 text-sm">Controle total da clínica</p>
                 </div>
               </li>
             </ul>
@@ -60,33 +95,39 @@ export default function Product() {
         </div>
 
         {/* Plataformas */}
-        <div className="bg-gray-50 rounded-lg p-8">
+        <div className="mt-12 bg-gray-50 rounded-lg p-8">
           <h3 className="text-2xl font-bold text-primary-blue mb-8 text-center">
             Plataformas Disponíveis
           </h3>
+          <p className="text-center text-gray-700 mb-8 text-lg">
+            RegiFlex é uma solução web responsiva, podendo ser utilizada em:
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
-              <div className="text-5xl mb-4">🖥️</div>
-              <h4 className="text-xl font-bold text-primary-blue mb-2">Web</h4>
+              <div className="text-5xl mb-4">💻</div>
+              <h4 className="text-xl font-bold text-primary-blue mb-2">Computadores</h4>
               <p className="text-gray-700">
-                Acesso via navegador em qualquer dispositivo com internet
+                Acesso via navegador em desktops
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
               <div className="text-5xl mb-4">📱</div>
-              <h4 className="text-xl font-bold text-primary-blue mb-2">Mobile</h4>
+              <h4 className="text-xl font-bold text-primary-blue mb-2">Tablets</h4>
               <p className="text-gray-700">
-                Aplicativo responsivo para smartphones e tablets
+                Interface otimizada para tablets
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition">
-              <div className="text-5xl mb-4">📺</div>
-              <h4 className="text-xl font-bold text-primary-blue mb-2">TV Painel</h4>
+              <div className="text-5xl mb-4">📲</div>
+              <h4 className="text-xl font-bold text-primary-blue mb-2">Smartphones</h4>
               <p className="text-gray-700">
-                Exibição em telas para chamada de pacientes
+                Aplicação responsiva mobile
               </p>
             </div>
           </div>
+          <p className="text-center text-gray-700 mt-8">
+            Isso permite que clínicas utilizem o sistema em diferentes dispositivos.
+          </p>
         </div>
       </div>
     </section>

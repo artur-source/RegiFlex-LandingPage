@@ -4,8 +4,6 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    clinicName: '',
     message: ''
   });
 
@@ -21,7 +19,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você poderia enviar os dados para um servidor
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => {
@@ -29,8 +26,6 @@ export default function Contact() {
       setFormData({
         name: '',
         email: '',
-        phone: '',
-        clinicName: '',
         message: ''
       });
     }, 3000);
@@ -40,7 +35,7 @@ export default function Contact() {
     <section id="contact" className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-primary-blue mb-16">
-          Entre em Contato
+          Contato
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -64,7 +59,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nome Completo *
+                    Nome *
                   </label>
                   <input
                     type="text"
@@ -75,7 +70,7 @@ export default function Contact() {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
                     placeholder="Seu nome"
-                    aria-label="Nome Completo"
+                    aria-label="Nome"
                   />
                 </div>
 
@@ -93,38 +88,6 @@ export default function Contact() {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
                     placeholder="seu.email@exemplo.com"
                     aria-label="Email"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
-                    placeholder="(11) 99999-9999"
-                    aria-label="Telefone"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="clinicName" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nome da Clínica
-                  </label>
-                  <input
-                    type="text"
-                    id="clinicName"
-                    name="clinicName"
-                    value={formData.clinicName}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
-                    placeholder="Sua clínica"
-                    aria-label="Nome da Clínica"
                   />
                 </div>
 
@@ -189,39 +152,6 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-
-              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4">
-                <div className="text-3xl">🏢</div>
-                <div>
-                  <h4 className="font-bold text-primary-blue mb-2">Localização</h4>
-                  <p className="text-gray-700">
-                    Suzano – SP<br />
-                    Brasil
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg shadow-md p-6 flex items-start gap-4">
-                <div className="text-3xl">⏰</div>
-                <div>
-                  <h4 className="font-bold text-primary-blue mb-2">Horário de Atendimento</h4>
-                  <p className="text-gray-700">
-                    Segunda a Sexta<br />
-                    9h às 18h
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-8 bg-gradient-to-br from-primary-blue to-primary-green rounded-lg p-6 text-white">
-              <h4 className="font-bold mb-3">Pronto para começar?</h4>
-              <p className="mb-4 text-blue-100">
-                Agende uma demonstração gratuita e veja como RegiFlex pode transformar sua clínica.
-              </p>
-              <button className="w-full bg-primary-yellow text-primary-blue font-bold py-2 rounded-lg hover:bg-yellow-400 transition">
-                Agendar Demonstração
-              </button>
             </div>
           </div>
         </div>

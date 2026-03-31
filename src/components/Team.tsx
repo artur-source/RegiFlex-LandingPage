@@ -1,137 +1,63 @@
 
 
 export default function Team() {
-  const teamMembers = [
-    {
-      name: 'Artur Alves Santos',
-      role: 'Liderança Técnica',
-      rgm: 'RGM: 2417606',
-      description: 'Arquitetura e desenvolvimento do sistema, infraestrutura da aplicação',
-      icon: '🔧'
-    },
-    {
-      name: 'Guilherme Almeida',
-      role: 'Desenvolvimento de Produto',
-      rgm: 'RGM: 2417704',
-      description: 'Design do produto, experiência do usuário e construção das interfaces',
-      icon: '🎨'
-    },
-    {
-      name: 'Nicollas Andrey',
-      role: 'Estratégia e Mercado',
-      rgm: 'RGM: 2417423',
-      description: 'Estratégia de negócios, análise de mercado e posicionamento do produto',
-      icon: '📊'
-    }
-  ];
-
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-primary-blue mb-4">
-          Organograma da Equipe
+        <h2 className="text-4xl font-bold text-center text-primary-blue mb-16">
+          Sobre o Projeto
         </h2>
-        <p className="text-center text-gray-600 mb-16 text-lg">
-          Conheça os profissionais por trás do RegiFlex
-        </p>
 
-        {/* Estrutura Organizacional */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <div className="bg-primary-blue text-white rounded-lg p-6 inline-block">
-              <p className="text-sm font-semibold text-blue-100">Projeto de Startup</p>
-              <p className="text-2xl font-bold">RegiFlex</p>
-              <p className="text-sm text-blue-100 mt-2">UniPiaget - Centro Universitário</p>
-            </div>
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
+          <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-primary-blue mb-4">Projeto de Startup</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              RegiFlex é um projeto desenvolvido por estudantes do curso de Análise e Desenvolvimento de Sistemas da UniPiaget como parte da disciplina de Projeto de Startups.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              O projeto combina conhecimentos técnicos, design de experiência do usuário e estratégia de negócios para criar uma solução inovadora para o mercado de saúde.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-8 text-center border-2 border-primary-blue hover:shadow-lg transition"
-              >
-                <div className="text-5xl mb-4">{member.icon}</div>
-                <h3 className="text-xl font-bold text-primary-blue mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-lg font-semibold text-primary-green mb-1">
-                  {member.role}
-                </p>
-                <p className="text-sm text-gray-600 mb-4">
-                  {member.rgm}
-                </p>
-                <p className="text-gray-700">
-                  {member.description}
-                </p>
-              </div>
-            ))}
+          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-primary-blue mb-4">Instituição</h3>
+            <ul className="space-y-3 text-gray-700">
+              <li><strong>Instituição:</strong> UniPiaget – Centro Universitário</li>
+              <li><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</li>
+              <li><strong>Disciplina:</strong> Projeto de Startups</li>
+              <li><strong>Local:</strong> Suzano – SP</li>
+              <li><strong>Ano:</strong> 2026</li>
+            </ul>
           </div>
         </div>
 
-        {/* Estrutura de Frentes */}
-        <div className="bg-gray-50 rounded-lg p-8">
+        {/* Equipe */}
+        <div className="bg-white rounded-lg shadow-lg p-8">
           <h3 className="text-2xl font-bold text-primary-blue mb-8 text-center">
-            Três Frentes Estratégicas
+            Equipe
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h4 className="text-lg font-bold text-primary-blue mb-3 flex items-center gap-2">
-                <span className="text-2xl">🔧</span>
-                Tecnologia
-              </h4>
-              <p className="text-gray-700 mb-4">
-                Arquitetura robusta e escalável do sistema
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>✓ Desenvolvimento Core</li>
-                <li>✓ Infraestrutura</li>
-                <li>✓ Segurança</li>
-                <li>✓ Performance</li>
-              </ul>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border-l-4 border-primary-blue">
+              <div className="text-4xl mb-3">👔</div>
+              <h4 className="text-lg font-bold text-primary-blue mb-2">Artur Alves Santos</h4>
+              <p className="text-primary-green font-semibold mb-2">Liderança Técnica</p>
+              <p className="text-sm text-gray-600">RGM: 2417606</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h4 className="text-lg font-bold text-primary-blue mb-3 flex items-center gap-2">
-                <span className="text-2xl">🎨</span>
-                Produto & UX
-              </h4>
-              <p className="text-gray-700 mb-4">
-                Experiência intuitiva e acessível para usuários
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>✓ Design de Interface</li>
-                <li>✓ Experiência do Usuário</li>
-                <li>✓ Acessibilidade</li>
-                <li>✓ Usabilidade</li>
-              </ul>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border-l-4 border-primary-blue">
+              <div className="text-4xl mb-3">🎨</div>
+              <h4 className="text-lg font-bold text-primary-blue mb-2">Guilherme Almeida</h4>
+              <p className="text-primary-green font-semibold mb-2">Desenvolvimento de Produto</p>
+              <p className="text-sm text-gray-600">RGM: 2417704</p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h4 className="text-lg font-bold text-primary-blue mb-3 flex items-center gap-2">
-                <span className="text-2xl">📊</span>
-                Negócio
-              </h4>
-              <p className="text-gray-700 mb-4">
-                Estratégia de mercado e posicionamento
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>✓ Análise de Mercado</li>
-                <li>✓ Estratégia Comercial</li>
-                <li>✓ Marketing</li>
-                <li>✓ Parcerias</li>
-              </ul>
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border-l-4 border-primary-blue">
+              <div className="text-4xl mb-3">📊</div>
+              <h4 className="text-lg font-bold text-primary-blue mb-2">Nicollas Andrey</h4>
+              <p className="text-primary-green font-semibold mb-2">Estratégia e Mercado</p>
+              <p className="text-sm text-gray-600">RGM: 2417423</p>
             </div>
           </div>
-        </div>
-
-        {/* Instituição */}
-        <div className="mt-12 bg-gradient-to-r from-primary-blue to-primary-green rounded-lg p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Instituição Responsável</h3>
-          <p className="text-lg mb-2">UniPiaget – Centro Universitário</p>
-          <p className="text-blue-100 mb-4">Curso: Análise e Desenvolvimento de Sistemas</p>
-          <p className="text-blue-100 mb-4">Disciplina: Projeto de Startups</p>
-          <p className="text-blue-100">Local: Suzano – SP | Ano: 2026</p>
         </div>
       </div>
     </section>
