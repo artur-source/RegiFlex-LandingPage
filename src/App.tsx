@@ -1,27 +1,32 @@
-
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import Product from './components/Product';
+import Problem from './components/Problem';
+import Solution from './components/Solution';
+import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import Differentials from './components/Differentials';
-import HowToAccess from './components/HowToAccess';
+import Mascot from './components/Mascot';
+import Company from './components/Company';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="w-full">
+    <div className="w-full font-sans selection:bg-primary-blue/30 selection:text-primary-blue">
       <Header />
-      <Hero />
-      <About />
-      <Product />
-      <Features />
-      <Differentials />
-      <HowToAccess />
-      <Team />
-      <Contact />
+      <main>
+        <Hero />
+        <Problem />
+        <Solution />
+        <HowItWorks />
+        <Features />
+        <Differentials />
+        <Mascot />
+        <Company />
+        <Team />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
